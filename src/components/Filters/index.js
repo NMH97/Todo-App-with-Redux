@@ -50,7 +50,7 @@ export default function Filters() {
         <Radio.Group value={filterStatus} onChange={handleFilterStatusChange}>
           <Radio value="All">All</Radio>
           <Radio value="Completed">Completed</Radio>
-          <Radio value="Todo">To do</Radio>
+          <Radio value="Todo">To doing</Radio>
         </Radio.Group>
       </Col>
       <Col sm={24}>
