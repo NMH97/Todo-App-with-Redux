@@ -20,7 +20,7 @@ function App() {
         height: "90vh",
       }}
     >
-      <Title style={{ textAlign: "center" }}>TODO APP CHANGE </Title>
+      <Title style={{ textAlign: "center" }}>TODO APP CHANGE 1 </Title>
       <Filters />
       <Divider />
       <TodoList />
