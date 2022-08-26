@@ -44,7 +44,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST}}
-          username: ${{secrets.USER}}
+          key: ${{secrets.KEY}}
           password: ${{secrets.PWD}}
           port: ${{secrets.PORT}}
           
@@ -57,7 +57,7 @@ jobs:
             git pull origin main
             npm install
             npm run build
-            pm2 restart api
+            pm2 restart todo
           
   
 
