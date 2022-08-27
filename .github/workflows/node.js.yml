@@ -54,5 +54,11 @@ jobs:
             sudo apt install nodejs -y
             
           
+            npm install -g pm2
+            cd ~/Todo-App-with-Redux
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart todo
   
 
