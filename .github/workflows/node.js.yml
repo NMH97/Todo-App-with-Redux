@@ -52,7 +52,12 @@ jobs:
             curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
             
             sudo apt install nodejs 
-            
+            npm install -g pm2
+            cd ~/Todo-App-with-Redux
+            git pull origin main
+            npm install
+            npm run build
+            pm2 restart todo
           
            
   
