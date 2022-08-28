@@ -29,35 +29,10 @@ jobs:
         run: |
           npm install
           npm run build
+          pm2 restart react-app
           
-        env: 
-          CI: true
-          
+   
 
-          
-  deploy:
-    needs: [build]
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: SSH deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST}}
-          key: ${{secrets.KEY}}
-          username: ${{secrets.USER}}
-          port: ${{secrets.PORT}}
-          
-          script:
-            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-            
-            sudo apt install nodejs 
-            npm install -g pm2
-            cd ~/Todo-App-with-Redux
-            git pull origin main
-            npm install
-            npm run build
-            pm2 restart todo
           
            
   
